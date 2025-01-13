@@ -1,31 +1,25 @@
 // Refactor following solution
 // Change double quotation to open or close quotation
+'use strict';
 
-const EMPTY = '';
-
-quotes = function (s) {
-  res = [];
-  open = false;
-  for (c of s) {
-    if (c === '"') {
-      for (i of c) {
-        if (!open) {
-          res.push('«');
-          open = true;
-        } else {
-          res.push('»');
-          open = false;
-        }
+const quotes = (string) => {
+  const result = [];
+  let openBracket = false;
+  for (const char of string) {
+    if (char === '"') {
+      if (openBracket === false) {
+        result.push('«');
+      } else {
+        result.push('»');
       }
+      openBracket = !openBracket;
     } else {
-      if (c !== '"') {
-        for (i of c) {
-          res.push(i);
-        }
+      if (char !== '"') {
+        result.push(char);
       }
     }
   }
-  return res.join(EMPTY);
+  return result.join('');
 };
 
 module.exports = quotes;
