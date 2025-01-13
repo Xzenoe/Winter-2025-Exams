@@ -6,7 +6,7 @@ const getvaluebetween = (string, prefix, suffix) => {
   if (i === -1) return '';
   else {
     const k = i + prefix.length;
-    str = str.substring(k);
+    string = string.substring(k);
     if (suffix) {
       i = string.indexOf(suffix);
       if (i === -1) return '';
