@@ -8,20 +8,16 @@ const quotes = (string) => {
   let open = false;
   for (const c of string) {
     if (c === '"') {
-      for (const i of c) {
-        if (!open) {
-          result.push('«');
-          open = true;
-        } else {
-          result.push('»');
-          open = false;
-        }
+      if (!open) {
+        result.push('«');
+        open = true;
+      } else {
+        result.push('»');
+        open = false;
       }
     } else {
       if (c !== '"') {
-        for (const i of c) {
-          result.push(i);
-        }
+        result.push(c);
       }
     }
   }
