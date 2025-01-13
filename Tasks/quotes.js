@@ -7,17 +7,9 @@ const quotes = (string) => {
   let openBracket = false;
   for (const char of string) {
     if (char === '"') {
-      if (openBracket === false) {
-        result.push('«');
-      } else {
-        result.push('»');
-      }
+      !openBracket ? result.push('«') : result.push('»');
       openBracket = !openBracket;
-    } else {
-      if (char !== '"') {
-        result.push(char);
-      }
-    }
+    } else result.push(char);
   }
   return result.join('');
 };
