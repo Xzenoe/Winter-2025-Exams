@@ -2,13 +2,12 @@
 // Increment all numbers in dictionary
 'use strict';
 
-const incNumbers = (array) => {
-  for (const element in array) {
-    if ((typeof array[element]).charAt(0).toUpperCase() === 'N') {
-      array[element] = array[element] + 1;
+const incNumbers = (object) => {
+  for (const element in object) {
+    if (typeof object[element] === 'number') {
+      object[element] = object[element] + 1;
     }
   }
-  return array;
+  return object;
 };
-
 module.exports = incNumbers;
