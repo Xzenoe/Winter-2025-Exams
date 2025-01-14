@@ -3,10 +3,12 @@
 'use strict';
 const merge_two_objects = (object_1, object_2) => {
   const object_3 = {};
-  for (const attribute_name of Object.keys(object_1))
-    object_3[attribute_name] = object_1[attribute_name];
-  for (const attribute_name of Object.keys(object_2))
-    object_3[attribute_name] = object_2[attribute_name];
+  const objectKeys_1 = Object.keys(object_1);
+  const objectKeys_2 = Object.keys(object_2);
+  for (const attribute of objectKeys_1)
+    object_3[attribute] = object_1[attribute];
+  for (const attribute of objectKeys_2)
+    object_3[attribute] = object_2[attribute];
   return object_3;
 };
 
