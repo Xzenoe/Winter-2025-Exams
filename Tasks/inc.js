@@ -3,7 +3,8 @@
 'use strict';
 
 const incNumbers = (object) => {
-  for (const element in object) {
+  const objectKeys = Object.keys(object);
+  for (const element of objectKeys) {
     if (typeof object[element] === 'number') {
       object[element] = object[element] + 1;
     }
