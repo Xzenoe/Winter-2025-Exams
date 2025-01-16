@@ -1,7 +1,7 @@
 // Refactor following solution
 // Merge two dictionaries
 'use strict';
-const merge_two_objects = (object_1, object_2) => {
+const mergeTwoObj = (object_1, object_2) => {
   const object_3 = {};
   const objectKeys_1 = Object.keys(object_1);
   const objectKeys_2 = Object.keys(object_2);
@@ -12,4 +12,4 @@ const merge_two_objects = (object_1, object_2) => {
   return object_3;
 };
 
-module.exports = merge_two_objects;
+module.exports = mergeTwoObj;
