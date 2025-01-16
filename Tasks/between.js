@@ -10,4 +10,4 @@ const getValueBetween = (string, prefix, suffix) => {
   return string;
 };
 
-module.exports = getvaluebetween;
+module.exports = getValueBetween;
