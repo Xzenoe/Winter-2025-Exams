@@ -2,7 +2,7 @@
 // Increment all numbers in dictionary
 'use strict';
 
-const incNumbers = (object) => {
+const inc = (object) => {
   const objectKeys = Object.keys(object);
   for (const element of objectKeys) {
     if (typeof object[element] === 'number') {
@@ -11,4 +11,4 @@ const incNumbers = (object) => {
   }
   return object;
 };
-module.exports = incNumbers;
+module.exports = inc;
