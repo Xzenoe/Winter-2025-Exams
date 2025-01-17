@@ -1,15 +1,17 @@
 // Refactor following solution
 // Merge two dictionaries
 'use strict';
-const merge_two_objects = (object_1, object_2) => {
-  const object_3 = {};
-  const objectKeys_1 = Object.keys(object_1);
-  const objectKeys_2 = Object.keys(object_2);
-  for (const attribute of objectKeys_1)
-    object_3[attribute] = object_1[attribute];
-  for (const attribute of objectKeys_2)
-    object_3[attribute] = object_2[attribute];
-  return object_3;
+const mergeTwoObjects = (firstObj, secondObj) => {
+  const result = {};
+  const firstObjKeys = Object.keys(firstObj);
+  const secondObjKeys = Object.keys(secondObj);
+  for (const attribute of firstObjKeys) {
+    result[attribute] = firstObj[attribute];
+  }
+  for (const attribute of secondObjKeys) {
+    result[attribute] = secondObj[attribute];
+  }
+  return result;
 };
 
-module.exports = merge_two_objects;
+module.exports = mergeTwoObjects;

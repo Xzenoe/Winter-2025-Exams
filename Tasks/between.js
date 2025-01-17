@@ -11,3 +11,4 @@ const getvaluebetween = (string, prefix, suffix) => {
 };
 
 module.exports = getvaluebetween;
+

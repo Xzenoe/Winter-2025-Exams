@@ -6,7 +6,7 @@ const incNumbers = (object) => {
   const objectKeys = Object.keys(object);
   for (const element of objectKeys) {
     if (typeof object[element] === 'number') {
-      object[element] = object[element] + 1;
+      object[element] += 1;
     }
   }
   return object;

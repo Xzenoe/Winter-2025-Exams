@@ -9,7 +9,9 @@ const quotes = (string) => {
     if (char === '"') {
       !openBracket ? result.push('«') : result.push('»');
       openBracket = !openBracket;
-    } else result.push(char);
+    } else {
+      result.push(char);
+    }
   }
   return result.join('');
 };
